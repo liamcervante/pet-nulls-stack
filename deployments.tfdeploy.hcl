@@ -5,8 +5,8 @@ orchestrate "auto_approve" "main" {
   description = "this is my orchestration rule"
 
   check {
-    condition = true
-    reason = "always true"
+    condition = context.plan.deployment == deployment.simple
+    reason = "always true for simple"
   }
 }
 
